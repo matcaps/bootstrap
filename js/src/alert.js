@@ -103,7 +103,7 @@ class Alert {
 
   _destroyElement(element) {
     if (element.parentNode) {
-      element.remove()
+      element.parentNode.removeChild(element)
     }
 
     EventHandler.trigger(element, EVENT_CLOSED)
