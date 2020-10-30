@@ -122,36 +122,3 @@
     }
   }
 }
-
-
-// Zebra-striping
-//
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
-
-.accordion-striped {
-  .accordion-button {
-    color: $accordion-striped-button-color;
-    background-color: $accordion-striped-button-bg;
-
-    &:not(.collapsed) {
-      color: $accordion-striped-button-accent-active-color;
-      background-color: $accordion-striped-button-active-bg;
-    }
-  }
-
-  .accordion-item:nth-of-type(#{$accordion-striped-order}) {
-    .accordion-button {
-      color: $accordion-striped-button-accent-color;
-      background-color: $accordion-striped-button-accent-bg;
-
-      &:not(.collapsed) {
-        color: $accordion-striped-button-accent-active-color;
-        background-color: $accordion-striped-button-accent-active-bg;
-      }
-    }
-
-    .accordion-body {
-      background-color: $accordion-striped-body-accent-bg;
-    }
-  }
-}
