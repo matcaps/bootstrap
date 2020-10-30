@@ -13,6 +13,7 @@
   border: solid $accordion-border-color;
   border-width: $accordion-border-width $accordion-border-width 0;
   @include border-radius(0);
+  overflow-anchor: none;
 
   &:not(.collapsed) {
     color: $accordion-button-active-color;
