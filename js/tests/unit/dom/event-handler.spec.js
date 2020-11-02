@@ -110,6 +110,7 @@ describe('EventHandler', () => {
 
       EventHandler.off(div, null, () => {})
       EventHandler.off(null, 'click', () => {})
+
       expect().nothing()
     })
 

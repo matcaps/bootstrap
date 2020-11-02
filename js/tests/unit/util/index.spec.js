@@ -178,6 +178,7 @@ describe('Util', () => {
       const spy = spyOn(window, 'setTimeout')
 
       Util.emulateTransitionEnd(el, 10)
+
       expect(spy).toHaveBeenCalled()
     })
 
@@ -226,6 +227,7 @@ describe('Util', () => {
       }
 
       Util.typeCheckConfig(namePlugin, config, defaultType)
+
       expect().nothing()
     })
 
@@ -240,6 +242,7 @@ describe('Util', () => {
       }
 
       Util.typeCheckConfig(namePlugin, config, defaultType)
+
       expect().nothing()
     })
   })
@@ -391,6 +394,7 @@ describe('Util', () => {
 
     it('should not return jQuery if not present', () => {
       window.jQuery = undefined
+
       expect(Util.getjQuery()).toEqual(null)
     })
   })
@@ -404,12 +408,14 @@ describe('Util', () => {
         bubbles: true,
         cancelable: true
       }))
+
       expect(spy).toHaveBeenCalled()
     })
 
     it('should execute callback if readyState is not "loading"', () => {
       const spy = jasmine.createSpy()
       Util.onDOMContentLoaded(spy)
+
       expect(spy).toHaveBeenCalled()
     })
   })

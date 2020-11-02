@@ -726,6 +726,7 @@ describe('Tooltip', () => {
 
       try {
         tooltip.hide()
+
         expect().nothing()
       } catch {
         throw new Error('should not throw error')
@@ -759,6 +760,7 @@ describe('Tooltip', () => {
       const tooltip = new Tooltip(tooltipEl)
 
       tooltip.update()
+
       expect().nothing()
     })
   })
@@ -839,6 +841,7 @@ describe('Tooltip', () => {
       const tooltip = new Tooltip(tooltipEl)
 
       tooltip.setElementContent(null, null)
+
       expect().nothing()
     })
 

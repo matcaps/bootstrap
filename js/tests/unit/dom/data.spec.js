@@ -24,6 +24,7 @@ describe('Data', () => {
       }
 
       Data.setData(div, 'test', data)
+
       expect(div.bsKey).toBeDefined()
     })
 
@@ -54,6 +55,7 @@ describe('Data', () => {
       }
 
       Data.setData(div, 'test', data)
+
       expect(Data.getData(div, 'test')).toEqual(data)
     })
 
@@ -91,6 +93,7 @@ describe('Data', () => {
       const div = fixtureEl.querySelector('div')
 
       Data.removeData(div, 'test')
+
       expect().nothing()
     })
 

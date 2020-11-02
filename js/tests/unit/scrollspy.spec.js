@@ -19,6 +19,7 @@ describe('ScrollSpy', () => {
     function listener() {
       expect(element.classList.contains('active')).toEqual(true)
       contentEl.removeEventListener('scroll', listener)
+
       expect(scrollSpy._process).toHaveBeenCalled()
       spy.calls.reset()
       cb()
@@ -567,6 +568,7 @@ describe('ScrollSpy', () => {
       const scrollSpy = new ScrollSpy(divEl)
 
       scrollSpy.dispose()
+
       expect(EventHandler.off).toHaveBeenCalledWith(divEl, '.bs.scrollspy')
     })
   })

@@ -277,6 +277,7 @@ describe('Modal', () => {
 
       modalEl.addEventListener('shown.bs.modal', () => {
         const dynamicModal = document.getElementById(id)
+
         expect(dynamicModal).toBeDefined()
         dynamicModal.parentNode.removeChild(dynamicModal)
         done()

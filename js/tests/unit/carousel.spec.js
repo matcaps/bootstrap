@@ -485,6 +485,7 @@ describe('Carousel', () => {
       }, () => {
         restorePointerEvents()
         delete document.documentElement.ontouchstart
+
         expect(carousel.touchDeltaX).toEqual(0)
         done()
       })

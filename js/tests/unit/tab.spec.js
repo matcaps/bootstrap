@@ -232,6 +232,7 @@ describe('Tab', () => {
 
       triggerList[0].addEventListener('hide.bs.tab', ev => {
         hideCalled = true
+
         expect(ev.relatedTarget.hash).toEqual('#profile')
       })
 
@@ -462,6 +463,7 @@ describe('Tab', () => {
       const firstLiLinkEl = fixtureEl.querySelector('li:first-child a')
 
       firstLiLinkEl.click()
+
       expect(firstLiLinkEl.classList.contains('active')).toEqual(true)
       expect(fixtureEl.querySelector('li:last-child a').classList.contains('active')).toEqual(false)
       expect(fixtureEl.querySelector('li:last-child .dropdown-menu a:first-child').classList.contains('active')).toEqual(false)

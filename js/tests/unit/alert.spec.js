@@ -30,6 +30,7 @@ describe('Alert', () => {
       const button = document.querySelector('button')
 
       button.click()
+
       expect(document.querySelectorAll('.alert').length).toEqual(0)
     })
 
@@ -43,6 +44,7 @@ describe('Alert', () => {
       const button = document.querySelector('button')
 
       button.click()
+
       expect(document.querySelectorAll('.alert').length).toEqual(0)
     })
   })

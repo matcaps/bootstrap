@@ -1350,15 +1350,18 @@ describe('Dropdown', () => {
         keydownArrowDown.key = 'ArrowDown'
 
         triggerDropdown.dispatchEvent(keydownArrowDown)
+
         expect(document.activeElement).toEqual(item1, 'item1 is focused')
 
         document.activeElement.dispatchEvent(keydownArrowDown)
+
         expect(document.activeElement).toEqual(item2, 'item2 is focused')
 
         const keydownArrowUp = createEvent('keydown')
         keydownArrowUp.key = 'ArrowUp'
 
         document.activeElement.dispatchEvent(keydownArrowUp)
+
         expect(document.activeElement).toEqual(item1, 'item1 is focused')
 
         done()
@@ -1387,6 +1390,7 @@ describe('Dropdown', () => {
         keydown.key = 'ArrowUp'
 
         document.activeElement.dispatchEvent(keydown)
+
         expect(document.activeElement).toEqual(item1, 'item1 is focused')
 
         done()

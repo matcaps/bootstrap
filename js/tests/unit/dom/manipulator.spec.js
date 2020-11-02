@@ -21,6 +21,7 @@ describe('Manipulator', () => {
       const div = fixtureEl.querySelector('div')
 
       Manipulator.setDataAttribute(div, 'key', 'value')
+
       expect(div.getAttribute('data-key')).toEqual('value')
     })
 
@@ -30,6 +31,7 @@ describe('Manipulator', () => {
       const div = fixtureEl.querySelector('div')
 
       Manipulator.setDataAttribute(div, 'testKey', 'value')
+
       expect(div.getAttribute('data-test-key')).toEqual('value')
     })
   })
@@ -41,6 +43,7 @@ describe('Manipulator', () => {
       const div = fixtureEl.querySelector('div')
 
       Manipulator.removeDataAttribute(div, 'key')
+
       expect(div.getAttribute('data-key')).toBeNull()
     })
 
@@ -50,6 +53,7 @@ describe('Manipulator', () => {
       const div = fixtureEl.querySelector('div')
 
       Manipulator.removeDataAttribute(div, 'testKey')
+
       expect(div.getAttribute('data-test-key')).toBeNull()
     })
   })
@@ -97,9 +101,11 @@ describe('Manipulator', () => {
       expect(Manipulator.getDataAttribute(div, 'test')).toEqual(false)
 
       div.setAttribute('data-test', 'true')
+
       expect(Manipulator.getDataAttribute(div, 'test')).toEqual(true)
 
       div.setAttribute('data-test', '1')
+
       expect(Manipulator.getDataAttribute(div, 'test')).toEqual(1)
     })
   })
