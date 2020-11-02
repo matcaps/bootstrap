@@ -9,5 +9,8 @@
   "extends": [
     "../../../.eslintrc.json",
     "plugin:jasmine/recommended"
-  ]
+  ],
+  "rules": {
+    "jasmine/expect-single-argument": "off"
+  }
 }
